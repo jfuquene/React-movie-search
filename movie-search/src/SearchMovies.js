@@ -15,7 +15,7 @@ function SearchMovies(){
         try {
             const res = await fetch(url)
             const data = await res.json()
-            console.log(data.results)
+            setMovies(data.results)
         } catch(error) {
             console.log(error)
         }
@@ -24,12 +24,22 @@ function SearchMovies(){
 
 
     return(
-        <form className="form" onSubmit={searchMovies}>
-            <label htmlFor="query" className="label">Search Movie:</label>
-            <input type="text" name="query" className="input"  placeholder="e.i Teminator" value={query} 
-            onChange={(e) => {setQuery(e.target.value)}}/>
-            <button type="submit" className="button">Search</button>
-    </form>
+        <>
+            <form className="form" onSubmit={searchMovies}>
+                <label htmlFor="query" className="label">Search Movie:</label>
+                <input type="text" name="query" className="input"  placeholder="e.i Teminator" value={query} 
+                onChange={(e) => {setQuery(e.target.value)}}/>
+                <button type="submit" className="button">Search</button>
+            </form>
+            <div className="card-list">
+                {movies.map(movie => {
+                    return <div className="card">
+                        <h1>{movie.title}</h1>
+                        
+                        </div>
+                })}
+            </div>
+        </>
     )
 }
 
