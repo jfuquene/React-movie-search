@@ -10,7 +10,7 @@ function SearchMovies(){
         e.preventDefault()
 
         // const query = "Jurassic Park"
-        
+       
 
         try {
             const res = await fetch(url)
@@ -33,7 +33,8 @@ function SearchMovies(){
             </form>
             <div className="card-list">
                 {movies.map(movie => {
-                    return <div className="card">
+                    return <div className="card" key={movie.id}>
+                        <img className="card--image" src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`} alt={movie.title}/>
                         <h1>{movie.title}</h1>
                         
                         </div>
