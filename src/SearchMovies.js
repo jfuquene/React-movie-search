@@ -33,7 +33,7 @@ function SearchMovies(){
                 <button type="submit" className="button">Search</button>
             </form>
             <div className="card-list">
-                {movies.filter(movie => movie.poster_path).map(movie =>  <Card movie={movie} key={movie.id} />)})
+                {movies.filter(movie => movie.poster_path).map(movie =>  <Card movie={movie} key={movie.id} />)}
             </div>
         </>
     )
