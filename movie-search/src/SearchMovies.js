@@ -10,7 +10,8 @@ function SearchMovies(){
     const searchMovies = async (e) => {
         e.preventDefault()
 
-       
+        // const query = "Jurassic Park"
+        const url = `https://api.themoviedb.org/3/search/movie?api_key=e9d64bbce5dbc782a6764a16fa7d902c&language=en-US&query=${query}&page=1&include_adult=false`;
 
         try {
             const res = await fetch(url)
