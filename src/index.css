@@ -115,6 +115,7 @@ small {
   display: block;
 }
 
-likeBtn {
+.likeBtn {
   display: block;
+  background-color: black;
 }

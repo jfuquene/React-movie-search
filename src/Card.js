@@ -10,7 +10,8 @@ function Card(props){
             <p><small>Release Date: {props.movie.release_date}</small></p>
             <p><small>Rating: {props.movie.vote_average}</small></p>
             <p className="card-desc">{props.movie.overview}</p>
-            <button className="likeBtn">Like</button>
+            <p>lets ssee if this works </p>
+            <button title="like" className="likeBtn">Like</button>
             </div>
                         
         </div>

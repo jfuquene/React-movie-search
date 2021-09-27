@@ -30,7 +30,8 @@ function SearchMovies(){
                 <label htmlFor="query" className="label">Search Movie:</label>
                 <input type="text" name="query" className="input"  placeholder="e.i Teminator" value={query} 
                 onChange={(e) => {setQuery(e.target.value)}}/>
-                <button type="submit" className="button">Search</button>
+                <button type="submit" className="button">no </button>
+               
             </form>
             <div className="card-list">
                 {movies.filter(movie => movie.poster_path).map(movie =>  <Card movie={movie} key={movie.id} />)}
