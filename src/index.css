@@ -114,3 +114,7 @@ small {
   margin: 0 auto;
   display: block;
 }
+
+likeBtn {
+  display: block;
+}
